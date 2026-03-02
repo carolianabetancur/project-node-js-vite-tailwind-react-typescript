@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  project-node-js-vite-tailwind-react-typescript:
+    container_name: project-node-js-vite-tailwind-react-typescript_frontend
+    build:
+      context: .
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    stdin_open: true
+    tty: true

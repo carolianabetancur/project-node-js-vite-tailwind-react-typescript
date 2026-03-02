@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  frontend:
+    container_name: frontend_vite
+    build:
+      context: ./frontend
+    ports:
+      - "5174:5173"   # 5174 en tu máquina, 5173 dentro del contenedor
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    stdin_open: true
+    tty: true
